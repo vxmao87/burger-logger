@@ -4,13 +4,13 @@
 <center><img src = "/assets/img/three-burgers.jpg" alt = "three-burgers"></center>
 
 <div class = "container">
-    <form>
+    <form class = "create-burger">
         <div class="form-group">
-            <label for="burgerInput">Please type in the name of your burger!</label>
-            <input type="text" class="form-control" id="burgerInput">
+            <label for="burgerName">Please type in the name of your burger!</label>
+            <input type="text" class="form-control" id="burgerName">
             <small id="burgerHelp" class="form-text text-muted">We'll post your new burger below.</small>
         </div>
-        <button type="submit" class="btn btn-primary" id = "create-burger">Submit this burger!</button>
+        <button type="submit" class="btn btn-primary">Submit this burger!</button>
     </form>
 </div>
 
@@ -23,8 +23,8 @@
                     {{#unless devoured}}
                         <li>
                             {{burger_name}}
-                            <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
-                                {{#if devoured}}Re-eat this burger!!!{{else}}Eat this burger!!!{{/if}}
+                            <button class="change-devoured" data-id = "{{id}}" data-newdevoured = "{{devoured}}">
+                                Eat this burger!!!
                             </button>
                         </li>
                     {{/unless}}
@@ -38,9 +38,7 @@
                     {{#if devoured}}
                         <li>
                             {{burger_name}}
-                            <button class="change-devoured" data-id="{{id}}" data-newDevoured="{{devoured}}">
-                                {{#if devoured}}Re-eat this burger!!!{{else}}Eat this burger!!!{{/if}}
-                            </button>
+                            <button class="change-devoured" data-id = "{{id}}" data-newdevoured = "{{devoured}}"></button>
                         </li>
                     {{/if}}
                 {{/each}}

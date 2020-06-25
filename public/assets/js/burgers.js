@@ -4,10 +4,11 @@ $(function() {
     // Function to call when "change-state" is clicked
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
-      var newDevoured = $(this).data("newDevoured");
+      // var newDevoured = $(this).data("newdevoured");
+      console.log(newDevoured);
   
       var newDevouredState = {
-        devoured: newDevoured
+        devoured: 1
       };
   
       // Send the PUT request.
@@ -24,13 +25,13 @@ $(function() {
     });
   
     // Function to call when "create-burger" button is clicked
-    $("#create-burger").on("submit", function(event) {
+    $(".create-burger").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
       var newBurger = {
         burger_name: $("#burgerName").val().trim(),
-        devoured: $("[burger_name=devoured]:checked").val.trim()
+        devoured: 0
       };
   
       // Send the POST request.

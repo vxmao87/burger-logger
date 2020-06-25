@@ -1,7 +1,24 @@
-h1 {
+h1, 
+h2 {
+    text-align: center;
+    color: rgb(52, 129, 22);
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: skyblue;
+}
+
+#burgerHelp, 
+#column2 {
     text-align: center;
 }
 
-ul, li {
+li {
     list-style: none;
+    margin-bottom: 20px;
 }

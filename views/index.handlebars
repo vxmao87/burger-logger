@@ -6,17 +6,17 @@
 <div class = "container">
     <form class = "create-burger">
         <div class="form-group">
-            <label for="burgerName">Please type in the name of your burger!</label>
+            <center><label for="burgerName">Please type in the name of your burger!</label></center>
             <input type="text" class="form-control" id="burgerName">
             <small id="burgerHelp" class="form-text text-muted">We'll post your new burger below.</small>
         </div>
-        <button type="submit" class="btn btn-primary">Submit this burger!</button>
+        <center><button type="submit" class="btn btn-primary">Submit this burger!</button></center>
     </form>
 </div>
 
 <div class = "container">
     <div class = "row">
-        <div class = "col-sm">
+        <div class = "col-sm" id = "column1">
             <h2>Burgers to Devour</h2>
             <ul class = "burgerUndevoured">
                 {{#each burgers}}
@@ -31,15 +31,12 @@
                 {{/each}}
             </ul>
         </div>
-        <div class = "col-sm">
+        <div class = "col-sm" id = "column2">
             <h2>Burgers Devoured</h2>
             <ul class = "burgerDevoured">
                 {{#each burgers}}
                     {{#if devoured}}
-                        <li>
-                            {{burger_name}}
-                            <button class="change-devoured" data-id = "{{id}}" data-newdevoured = "{{devoured}}"></button>
-                        </li>
+                        <li>{{burger_name}}</li>
                     {{/if}}
                 {{/each}}
             </ul>
